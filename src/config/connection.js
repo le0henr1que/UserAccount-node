@@ -6,7 +6,7 @@ class Connection {
 
     dataBaseConnectionMongoDB(){
 
-        this.mongoDBConnection = mongoose.connect("mongodb+srv://leonardo:PeqoiVL1r6mmyK5e@cluster0.puymz.mongodb.net/acountUser?retryWrites=true&w=majority", {
+        this.mongoDBConnection = mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
           
