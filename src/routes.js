@@ -4,13 +4,13 @@ const cors = require('cors')
 
 const routes = new Router();
 
-routes.use((req, res, next) => {
+app.use((req, res, next) => {
             
     res.header("Access-Control-Allow-Origin", "*")
     res.header("Access-Control-Allow-Credentials", true);
     res.header("Access-Control-Allow-Methods", "Get, POST, PUT, DELETE")
     res.header("Access-Control-Allow-Headers", "Access, Content-type, Authorization, Acept, Origin, X-Requested-width")
-    routes.use(cors())
+    app.use(cors())
     next();
 })
 
