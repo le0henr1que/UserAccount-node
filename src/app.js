@@ -16,7 +16,7 @@ class App {
         this.app.use(express.json());
 
         this.app.use((req, res, next) => {
-            
+            res.options ( ' * ')
             res.header("Access-Control-Allow-Origin", "*")
             res.header("Access-Control-Allow-Credentials", true);
             res.header("Access-Control-Allow-Methods", "Get, POST, PUT, DELETE")
